@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div class="container">
+                
+                <div class="header-text">
+                    <h1>Generate a <strong>random password</strong></h1>
+                    <p class="header-paragraph">Never use an insecure password again</p>
+                </div>
+                
+                <div class="input-container">
+                    <p class="input-paragraph">Input length of a password:</p>
+                    <input id="input" class="input" type="range" min="4" max="18" steap="1" value="14" onChange="showPasswordLength()">
+                    <p class="input-length">14</p>
+                </div>
+
+                <div>
+                    <button class="button" onClick="displayPasswords()">
+                        <img src="https://user-images.githubusercontent.com/25910896/159922263-2298e4b5-3e18-45db-948e-4fcf7d758983.png" alt="thunderbolt icon">
+                        Generate passwords
+                    </button>
+                </div>
+
+                <div class="password-container">
+                    
+                    <div class="password" onclick="copyToClipboard(this.innerText)"
+                    onmouseover="showCopyMessage(this.innerText)" onmouseout="stopShowingCopyMessage()">
+                    <img src="https://user-images.githubusercontent.com/25910896/159922279-d0568a90-a496-4d41-b7b2-1184873e7cec.png" alt="three dots">
+                    </div>
+
+                    <div class="password" onclick="copyToClipboard(this.innerText)"
+                    onmouseover="showCopyMessage(this.innerText)" onmouseout="stopShowingCopyMessage()">
+                    <img src="https://user-images.githubusercontent.com/25910896/159922279-d0568a90-a496-4d41-b7b2-1184873e7cec.png" alt="three dots">
+                    </div>
+
+                    <div class="password" onclick="copyToClipboard(this.innerText)"
+                    onmouseover="showCopyMessage(this.innerText)" onmouseout="stopShowingCopyMessage()">
+                    <img src="https://user-images.githubusercontent.com/25910896/159922279-d0568a90-a496-4d41-b7b2-1184873e7cec.png" alt="three dots">
+                    </div>
+
+                    <div class="password" onclick="copyToClipboard(this.innerText)"
+                    onmouseover="showCopyMessage(this.innerText)" onmouseout="stopShowingCopyMessage()">
+                    <img src="https://user-images.githubusercontent.com/25910896/159922279-d0568a90-a496-4d41-b7b2-1184873e7cec.png" alt="three dots">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="positioned"></div>
+        </section>
+    </main>
+</body>
+
+<script src="index.js"></script>
+</html>
